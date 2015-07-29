@@ -19,12 +19,12 @@ public class SDButtons extends CommandBase {
     // Called just before this Command runs the first time
     protected void initialize() {
     	sc.addDefault("sound 1" , sound1);
-    	sc.addDefault("sound 2" , sound2);
+    	sc.addObject("sound 2" , sound2);
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	sc.getSelected();
+    	sound = sc.getSelected();
     	buttons.sound();
     }
 
