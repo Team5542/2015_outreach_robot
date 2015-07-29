@@ -8,8 +8,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
  */
 public class SDButtons extends CommandBase {
 	SendableChooser sc = new SendableChooser();
-	Sendable sound1;
-	Sendable sound2;
+	Sendable sound;
 	
 	
     public SDButtons() {
@@ -19,8 +18,8 @@ public class SDButtons extends CommandBase {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	sc.addDefault("sound 1" , sound1);
-    	sc.addDefault("sound 2" , sound2);
+    	sc.addDefault("sound 1" , sound);
+    	sc.addDefault("sound 2" , sound);
     }
 
     // Called repeatedly when this Command is scheduled to run
