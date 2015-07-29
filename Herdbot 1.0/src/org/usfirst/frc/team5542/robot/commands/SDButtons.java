@@ -8,27 +8,29 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
  */
 public class SDButtons extends CommandBase {
 	SendableChooser sc = new SendableChooser();
-	Sendable sound;
-	
+	Object sound;
+	Object sound1;
+	Object sound2;
 	
     public SDButtons() {
-        // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
+    	requires(buttons);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	sc.addDefault("sound 1" , sound);
-    	sc.addDefault("sound 2" , sound);
+    	sc.addDefault("sound 1" , sound1);
+    	sc.addDefault("sound 2" , sound2);
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	sc.getSelected();
+    	buttons.sound();
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return true;
+        return false;
     }
 
     // Called once after isFinished returns true
