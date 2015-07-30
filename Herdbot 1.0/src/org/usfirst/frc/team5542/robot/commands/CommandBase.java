@@ -27,6 +27,5 @@ public abstract class CommandBase extends Command {
 		camera = Camera.getInstance();
 		pdp = PDP.getInstance();
 		sonar = Sonar.getInstance();
-		buttons = SDButtonsStart.getInstance();
 	}
 }
