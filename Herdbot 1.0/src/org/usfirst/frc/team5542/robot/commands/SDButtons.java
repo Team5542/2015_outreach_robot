@@ -1,6 +1,5 @@
 package org.usfirst.frc.team5542.robot.commands;
 
-import edu.wpi.first.wpilibj.Sendable;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 
 /**
@@ -24,7 +23,7 @@ public class SDButtons extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	sound = sc.getSelected();
+    	sound =  sc.getSelected();
     	buttons.sound();
     }
 
