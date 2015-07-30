@@ -19,11 +19,11 @@ public class SDButtonsStart extends Subsystem {
         //setDefaultCommand(new MySpecialCommand());
     	setDefaultCommand(new SDButtons());
     }
-    public static SDButtons instance;
+    public static SDButtonsStart instance;
 	
-    public static SDButtons getInstance(){
+    public static SDButtonsStart getInstance(){
     	if (instance == null)
-    		instance = new SDButtons();
+    		instance = new SDButtonsStart();
     	return instance;
     }
 }
