@@ -5,10 +5,10 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team5542.robot.commands.CommandBase;
+import org.usfirst.frc.team5542.robot.commands.SendData;
 import org.usfirst.frc.team5542.robot.commands.autonomous.AutoGamePlan;
 import org.usfirst.frc.team5542.robot.commands.autonomous.JustMove;
 
@@ -22,7 +22,6 @@ import org.usfirst.frc.team5542.robot.commands.autonomous.JustMove;
 public class Robot extends IterativeRobot {
 
 	public static OI oi;
-	SendableChooser sc;
     Command autonomousCommand;
 
     /**
@@ -32,12 +31,17 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
     	CommandBase.init();
     	oi = new OI();
-    	sc = new SendableChooser();
-    	Object sound1 = null;
-    	Object sound2 = null;
-    	sc.addObject("sound 2" , sound2);
-    	sc.addDefault("sound 1" , sound1);
-    	SmartDashboard.putData("Test" , sc);
+    	
+    	SmartDashboard.putData("Sound 1" , new SendData("1.mp3"));
+    	SmartDashboard.putData("Sound 2" , new SendData("2.mp3"));
+    	SmartDashboard.putData("Sound 3" , new SendData("3.mp3"));
+    	SmartDashboard.putData("Sound 4" , new SendData("4.mp3"));
+    	SmartDashboard.putData("Sound 5" , new SendData("5.mp3"));
+    	SmartDashboard.putData("Sound 6" , new SendData("6.mp3"));
+    	SmartDashboard.putData("Sound 7" , new SendData("7.mp3"));
+    	SmartDashboard.putData("Sound 8" , new SendData("8.mp3"));
+    	SmartDashboard.putData("Sound 9" , new SendData("9.mp3"));
+    	SmartDashboard.putData("Sound 10" , new SendData("10.mp3"));
     	
     	autonomousCommand = new JustMove();
         //de-comment this when competing or testing auto
