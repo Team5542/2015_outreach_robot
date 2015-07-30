@@ -16,7 +16,6 @@ public abstract class CommandBase extends Command {
 	protected static Camera camera;
 	protected static PDP pdp;
 	protected static Sonar sonar;
-	protected static SDButtonsStart buttons;
 	
 	
 	
