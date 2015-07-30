@@ -5,6 +5,8 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team5542.robot.commands.CommandBase;
 import org.usfirst.frc.team5542.robot.commands.autonomous.AutoGamePlan;
@@ -20,7 +22,7 @@ import org.usfirst.frc.team5542.robot.commands.autonomous.JustMove;
 public class Robot extends IterativeRobot {
 
 	public static OI oi;
-
+	SendableChooser sc;
     Command autonomousCommand;
 
     /**
@@ -30,6 +32,13 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
     	CommandBase.init();
     	oi = new OI();
+    	sc = new SendableChooser();
+    	Object sound1 = null;
+    	Object sound2 = null;
+    	sc.addObject("sound 2" , sound2);
+    	sc.addDefault("sound 1" , sound1);
+    	SmartDashboard.putData("Test" , sc);
+    	
     	autonomousCommand = new JustMove();
         //de-comment this when competing or testing auto
         
