@@ -59,7 +59,7 @@ public class OI {
 	
 	
 	//stick sensitivity curve (creates a graph with y=x^(sensitivity) where x = controller input y = motor output)
-	public static final double sensitivity = 1.5;
+	public static final double sensitivity = 1.2;
 	
 	//accessor for controller
 	public Joystick getController(){
@@ -95,6 +95,7 @@ public class OI {
 			//thumb.whenPressed(new ArmDown());
 			//b3.whenPressed(new SwitchCan());
 		}
+		rBumper.whenPressed(new SendData("1.mp3"));
 	}
 	
 	//// CREATING BUTTONS
