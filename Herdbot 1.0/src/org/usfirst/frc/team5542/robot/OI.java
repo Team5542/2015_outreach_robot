@@ -83,8 +83,14 @@ public class OI {
 		start.whenPressed(new ToggleDrive());
 		//select.whenPressed(new SwitchController());
 		//b12.whenPressed(new SwitchController());
+		lBumper.whenPressed(new SendData("6.mp3"));
+		rBumper.whenPressed(new SendData("1.mp3"));
+		aButton.whenPressed(new SendData("2.mp3"));
+		bButton.whenPressed(new SendData("3.mp3"));
+		xButton.whenPressed(new SendData("4.mp3"));
+		yButton.whenPressed(new SendData("5.mp3"));
 		{
-			bButton.whenPressed(new CenterCamera());
+			//bButton.whenPressed(new CenterCamera());
 			//rBumper.whenPressed(new ArmUp());
 			//lBumper.whenPressed(new ArmDown());
 			//aButton.whenPressed(new SwitchCan());
@@ -95,7 +101,6 @@ public class OI {
 			//thumb.whenPressed(new ArmDown());
 			//b3.whenPressed(new SwitchCan());
 		}
-		rBumper.whenPressed(new SendData("1.mp3"));
 	}
 	
 	//// CREATING BUTTONS
