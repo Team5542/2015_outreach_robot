@@ -80,6 +80,7 @@ public class OI {
 	//constructor
 	public OI(){
 		xBox = true;
+		select.whenPressed(new ToggleCandy());
 		start.whenPressed(new ToggleDrive());
 		rBumper.whenPressed(new SendData("1.mp3"));
 		lBumper.whenPressed(new SendData("3.mp3"));
