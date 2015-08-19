@@ -42,7 +42,6 @@ public class Robot extends IterativeRobot {
     	SmartDashboard.putData("Sound 8" , new SendData("8.mp3"));
     	SmartDashboard.putData("Sound 9" , new SendData("9.mp3"));
     	SmartDashboard.putData("Sound 10" , new SendData("10.mp3"));
-    	
     	autonomousCommand = new JustMove();
         //de-comment this when competing or testing auto
         
