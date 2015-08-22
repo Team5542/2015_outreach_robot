@@ -1,10 +1,10 @@
 package org.usfirst.frc.team5542.robot.subsystems;
 
 import org.usfirst.frc.team5542.robot.RobotMap;
-import org.usfirst.frc.team5542.robot.commands.ToggleCandy;
 
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  *
@@ -12,15 +12,20 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class CandyMotor extends Subsystem {
     
 	public static CANTalon cMotor;
+	public double speed = 0;
 	
 	private CandyMotor(){
 		cMotor = new CANTalon (RobotMap.cMotor);
+		SmartDashboard.putNumber("Candy", speed);
 	}
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 	
-	public static void ToggleCandy(){
-		cMotor.set(Math.abs(cMotor.get() - 0.5));
+	public static void candyOn(){
+		cMotor.set(SmartDashboard.getNumber("Candy"));
+	}
+	public static void candyOff(){
+		cMotor.set(0);
 	}
 	
 	public static CandyMotor instance;
@@ -34,7 +39,7 @@ public class CandyMotor extends Subsystem {
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
-    	setDefaultCommand(new ToggleCandy());
+    	//setDefaultCommand(new ToggleCandy());
     }
 }
 
